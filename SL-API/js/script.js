@@ -1,24 +1,40 @@
 const getCodes = async (input) => {
-    //var input = $("#station").val();
-  fetch(
+  //var input = $("#station").val();
+  const res = await fetch(
     `https://api.sl.se/api2/typeahead.json?key=${codesKey}&searchstring=${input}&stationsonly=true&maxresults10`
-  )
-    .then((res) => res.json())
-    .then((data) => searchStop(data));
+  );
+  const data = await res.json();
+  return data;
 };
 
-const searchStop = async(data) => {
+const searchStop = async (stop) => {
   //console.log(data.ResponseData[0]);
+  const data = await getCodes(stop);
+
   var id = data.ResponseData[0].SiteId;
-  fetch(
+  const res = await fetch(
     `https://api.sl.se/api2/realtimedeparturesV4.json?key=${departuresKey}&siteid=${id}&timewindow=30`
-  )
-  .then((res) => res.json())
-  .then((data) => console.log(data));
+  );
+  const datas = await res.json();
+  return datas;
 };
 
-const printBusses = async(stop) => {
-    await getCodes(stop);
-}
+const printBusses = async (stop) => {
+var i = 1;
+  const busses = await searchStop(stop);
+  const busList = busses.ResponseData.Buses;
+  busList.forEach((bus) => {
+    $("#bussList").append(
+      `<tr>
+      <th scope="row">${i}</th>
+      <td>${bus.Destination}</td>
+      <td>${bus.DisplayTime}</td> 
+      <td>${bus.LineNumber}</td>
+      <td>${bus.StopPointDesignation}</td></tr>`
+    );
+    i++;
+  });
+  console.log(busses.ResponseData.LatestUpdate);
+};
 
 printBusses("Huddinge Sjukhus");

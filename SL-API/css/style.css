@@ -2,3 +2,29 @@
     margin: 0;
     padding: 0;
 }
+body{
+    height: 90vh;
+}
+nav{
+    box-shadow: 0px 0px 10px 1px black;
+}
+main{
+    margin-top: 1vh;
+}
+#bussTable{
+    height: 80vh;
+    overflow: scroll;
+}
+thead{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    box-shadow: 0px 2px 10px 0px black;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;  
+}
