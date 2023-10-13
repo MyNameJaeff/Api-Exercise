@@ -20,9 +20,10 @@ const searchStop = async (stop) => {
 };
 
 const printBusses = async (stop) => {
-var i = 1;
+  var i = 1;
   const busses = await searchStop(stop);
   const busList = busses.ResponseData.Buses;
+  $("#bussList").html("");
   busList.forEach((bus) => {
     $("#bussList").append(
       `<tr>
@@ -34,7 +35,13 @@ var i = 1;
     );
     i++;
   });
-  console.log(busses.ResponseData.LatestUpdate);
+  console.log(busses);
 };
 
-printBusses("Huddinge Sjukhus");
+$("#search-btn").click(() => {
+  var input = $("#input-form").val();
+  if (input != "") {
+    printBusses(input);
+    $("#input-form").val("");
+  }
+});

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
         <a class="navbar-brand" href="#" style="pointer-events: none;">SL App</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +34,10 @@
                 </li>
             </ul>
         </div>
+        <form class="form-inline my-2 my-lg-0" onsubmit="return false;">
+            <input class="form-control mr-sm-2" id="input-form" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="search-btn" type="submit">Search</button>
+        </form>
     </nav>
     <main>
         <div id="bussTable">
@@ -56,7 +60,8 @@
     <footer class="text-center text-lg-start bg-light text-muted">
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2023 Copyright:
-            <a class="text-reset fw-bold" target="_blank" href="https://static.wikia.nocookie.net/amogus/images/c/cb/Susremaster.png/revision/latest?cb=20210806124552">Amonguses.com</a>
+            <a class="text-reset fw-bold" target="_blank"
+                href="https://static.wikia.nocookie.net/amogus/images/c/cb/Susremaster.png/revision/latest?cb=20210806124552">Amonguses.com</a>
         </div>
     </footer>
     <script src="../SL-API/js/conf.js" defer></script>
