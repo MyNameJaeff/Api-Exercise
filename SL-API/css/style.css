@@ -28,3 +28,6 @@ footer{
     bottom: 0;
     width: 100%;  
 }
+tr:hover{
+    background-color: rgb(231, 231, 231);
+}
