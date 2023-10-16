@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SL Saken</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel=stylesheet href="../css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" style="pointer-events: none;">SL App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./vaderSLbook.html">Väder Osv...</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./adressVal.html">Adress Val <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./bilUppg.html">Besiktning</a>
+                </li>
+            </ul>
+        </div>
+        <div id="dateDiv">
+            <h4 id="currentDate">DATE:</h4>
+        </div>
+        <form class="form-inline my-2 my-lg-0" onsubmit="return false;">
+            <input class="form-control mr-sm-2" id="input-form" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="search-btn" type="submit">Search</button>
+        </form>
+    </nav>
+    <main>
+        <form id="myForm">
+            <label for="adress-input">Adress:</label>
+            <input type="text" name="adress-input" id="adress-input" required><br>
+            <label for="country">Country:</label>
+            <select id="region-select" required>
+                <option value="AR">Argentina</option>
+                <option value="AU">Australia</option>
+                <option value="AT">Austria</option>
+                <option value="BE">Belgium</option>
+                <option value="BR">Brazil</option>
+                <option value="CA">Canada</option>
+                <option value="CL">Chile</option>
+                <option value="CO">Colombia</option>
+                <option value="CZ">Czechia</option>
+                <option value="DK">Denmark</option>
+                <option value="EE">Estonia</option>
+                <option value="FI">Finland</option>
+                <option value="FR">France</option>
+                <option value="DE">Germany</option>
+                <option value="HU">Hungary</option>
+                <option value="IE">Ireland</option>
+                <option value="IT">Italy</option>
+                <option value="LV">Latvia</option>
+                <option value="LT">Lithuania</option>
+                <option value="LU">Luxembourg</option>
+                <option value="MY">Malaysia</option>
+                <option value="MX">Mexico</option>
+                <option value="NL">Netherlands</option>
+                <option value="NO">Norway</option>
+                <option value="NZ">New Zealand</option>
+                <option value="PL">Poland</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="SG">Singapore</option>
+                <option value="SK">Slovakia</option>
+                <option value="SI">Slovenia</option>
+                <option value="ES">Spain</option>
+                <option value="SE">Sweden</option>
+                <option value="CH">Switzerland</option>
+                <option value="GB">United Kingdom</option>
+                <option value="US" selected="">United States</option>
+                <option value="">Unknown</option>
+            </select><br>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <script src="../js/validateScript.js"></script>
+    <script src="../js/timeScript.js"></script>
+</body>
+
+</html>
