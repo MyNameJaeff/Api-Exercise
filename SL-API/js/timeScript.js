@@ -20,3 +20,4 @@ const updateTime = (dateStr) => {
 setInterval(() => {
   genDate();
 }, 200);
+genDate();
