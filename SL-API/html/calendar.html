@@ -8,7 +8,9 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel=stylesheet href="../css/style.css">
+    <link rel=stylesheet href=../css/style.css>
+    <script src="../jquery-ui-1.13.2/jquery-ui.js"></script>
+    <script src="../jquery-ui-1.13.2/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -21,16 +23,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="../index.html">Home</a>
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./vaderSLbook.html">Väder Osv...</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./adressVal.html">Adress Val</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./bilUppg.html">Besiktning <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./calendar.html">Calendar</a>
                 </li>
             </ul>
         </div>
@@ -42,12 +41,17 @@
             <button class="btn btn-outline-success my-2 my-sm-0" id="search-btn" type="submit">Search</button>
         </form>
     </nav>
-    <main>
-        <a href="./vaderSLbook.html">Väder, SL och Böcker</a>
-        <a href="./adressVal.html">Adress Validering</a>
-        <a href="./bilUppg.html">Besiktning</a>
-    </main>
+    
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" target="_blank"
+                href="https://static.wikia.nocookie.net/amogus/images/c/cb/Susremaster.png/revision/latest?cb=20210806124552">Amonguses.com</a>
+        </div>
+    </footer>
     <script src="../js/timeScript.js"></script>
+    <script src="../js/conf.js"></script>
+    <script src="../js/calendarScript.js"></script>
 </body>
 
 </html>

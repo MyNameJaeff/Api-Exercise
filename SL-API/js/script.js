@@ -182,8 +182,8 @@ const getAndPrintBooks = async () => {
     i++;
   });
 };
-printTable("Huddinge Sjukhus", "Buss");
 
+printTable("Huddinge Sjukhus", "Buss");
 getAndPrintBooks();
 generateWeather("Huddinge");
 printTable("Flemmingsberg Station", "Tåg");
