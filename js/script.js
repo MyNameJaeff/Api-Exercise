@@ -102,14 +102,6 @@ const printTable = async (stop, what) => {
   }
 };
 
-/*$("#search-btn").click(() => {
-  var input = $("#input-form").val();
-  if (input != "") {
-    printTable(input, "Bus");
-    $("#input-form").val("");
-  }
-});*/
-
 const getWeather = async (CityName) => {
   const res = await fetch(
     `https://api.openweathermap.org/data/2.5/forecast?q=${CityName}&appid=${weatherKey}&units=metric`
@@ -126,7 +118,7 @@ const generateWeather = async (CityName) => {
   $("#vaderDayIcon").append(
     `<img src="https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png">`
   );
-  $("#vaderDayIcon").append(`<h3>${currentWeather.main.temp}&#8451</h3>`);
+  $("#vaderDayIcon").append(`<h3>${Math.round(currentWeather.main.temp)}&#8451</h3>`);
   $("#vaderDayFeels").append(`
   <p>
   Feels like ${Math.round(currentWeather.main.feels_like)}&#8451. 

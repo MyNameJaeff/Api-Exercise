@@ -31,9 +31,8 @@ const processCal = async (data) => {
       betterEndDate[1] = betterEndDate[1].split("+")[0];
 
       const test = new Date(item.start.dateTime);
-      // style="grid-area:${startCol[0] - 8} / 1 / ${endCol[0] - 8} / 1"
       $(`#calendarDiv>.${days[test.getDay()-1]}`).append(`
-      <div class="calendarItem" id="${(item.summary).replace(/ /g,'')}">
+      <div class="calendarItem" id="${(((item.summary).replace(/ /g,'')).replace("(", "")).replace(")", "")}">
         <p>${item.summary}</p>
         <p>${betterStartDate[1] + " - " + betterEndDate[1]}</p>
       </div>`);
@@ -43,3 +42,5 @@ const processCal = async (data) => {
 getCalendar(
   "c_d9aaaa6aa5b776b23b57ec82ab49a0b39b34177b8390aa055f926d10033e3648@group.calendar.google.com"
 );
+
+// Hade inte tiden eller orken att fixa en bra schema design, försökte med både table och grid men inget bra kom fram av det så gjorde det enkelt men funktionellt
