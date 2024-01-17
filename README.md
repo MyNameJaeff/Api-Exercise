@@ -1,4 +1,4 @@
-# SL API Sak
+# Api-Exercise
 This was a project during year 4 at NTI Södertörn where we were to use 3 diffrent api's. One for buss & train departure times, one for current weather & date and lastly one for the current top 5 popular books (NY-Times api)
 
 ## Requirements
